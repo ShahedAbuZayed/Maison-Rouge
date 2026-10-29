@@ -1,0 +1,177 @@
+/* Base & Theme Styles */
+body {
+    background-color: #1A0106;
+    color: #FBF8F5;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Luxury Styling */
+.glass-panel {
+    background: rgba(45, 3, 11, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-card {
+    background: rgba(42, 3, 11, 0.55);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+/* Gold Gradient Text Utility */
+.text-gold-gradient {
+    background: linear-gradient(135deg, #FBF8F5 0%, #E6C565 40%, #D4AF37 70%, #AA820A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Radiant Shimmer Glow */
+@keyframes shimmerGlow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+.shimmer-glow {
+    animation: shimmerGlow 5s infinite ease-in-out;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #1A0106;
+}
+::-webkit-scrollbar-thumb {
+    background: #420612;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Drawer Slide Animation Class */
+.drawer-slide {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Radial Vignette Overlay */
+.radial-vignette {
+    background: radial-gradient(circle, rgba(26,1,6,0) 20%, rgba(26,1,6,0.85) 90%);
+}
+
+/* Hide Scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* =========================================================
+   Luxury Header & Centered Alignment Fixes (تعديل المنيو)
+   ========================================================= */
+
+.mobile-luxury-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(45, 3, 11, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 12px 20px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+/* محاذاة الشعار بالمركز تماماً */
+.brand-logo-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    direction: ltr; /* حماية تباعد الأحرف من اتجاه اللغة العربية */
+}
+
+.brand-logo-centered h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    letter-spacing: 4px;
+    color: #FBF8F5;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    padding-left: 4px; /* موازنة المسافة الحرفية الأخيرة للسنتر الدقيق */
+    white-space: nowrap;
+}
+
+.brand-logo-centered span {
+    display: block;
+    font-size: 0.58rem;
+    letter-spacing: 3.5px;
+    color: #D1B3BA;
+    margin-top: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-left: 3.5px; /* موازنة المسافة السفلية */
+}
+
+/* الأزرار والأيقونات */
+.menu-toggle-btn, 
+.header-actions .icon-btn {
+    background: transparent;
+    border: none;
+    color: #FBF8F5;
+    font-size: 1.15rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle-btn:hover, 
+.header-actions .icon-btn:hover {
+    color: #D4AF37;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* عداد الأرقام الصغير */
+.dot-badge {
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    background: #D4AF37;
+    color: #1A0106;
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
